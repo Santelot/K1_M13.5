@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M13.5</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día y preparar sus mentes para la actividad.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Hola, Code Squad! ¡Qué bueno verlos aquí! Hoy tenemos una misión increíble: ¡vamos a una antigua selva en busca del Templo de la Serpiente Emplumada! La estatua de Quetzalcóatl se cayó por un gran terremoto, y necesitamos toda su energía para reconstruirla antes de que el templo se cierre. ¿Están listos para este reto? Vamos a empezar por preparar nuestros cerebros."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 "Gimnasio CODE SQUAD" e introduce la importancia de entrenar el cerebro antes de enfrentar el reto del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Atención, Code Squad! Antes de partir hacia la selva, es importante entrenar nuestros cerebros para resolver cualquier desafío. Vamos a seguir las instrucciones de esta canción y asegurarnos de estar listos para todo lo que venga."</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de algoritmos a través de un baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Algoritmos” e introduce la canción que seguiremos hoy.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Muy bien, equipo! Ahora que sabemos qué hacer, ¡es hora de bailar! Sigamos las indicaciones de la canción colocando cada paso en el orden correcto, como si estuviéramos ensamblando la serpiente con sus plumas mágicas. No se preocupen si la primera vez no sale perfecto. ¡Estamos aquí para aprender y mejorar!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🧭 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de cuenta cuentos y narra la historia.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del Code Squad! Les tengo una historia fascinante: en lo más profundo de la selva, unos arqueólogos encontraron un antiguo templo azteca, el hogar de la poderosa serpiente emplumada, Quetzalcóatl. Tras un terremoto, el templo se derrumbó y la estatua de la serpiente se rompió en varios segmentos. Cada segmento está decorado con una pluma hecha de piedra preciosa, como esmeralda, jade y obsidiana. ¡Pero necesitamos reunir todas las piezas y devolver a la serpiente su forma original!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto para motivar al CODE SQUAD.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Code Squad, aquí comienza nuestra misión! Los arqueólogos encontraron una tablilla que muestra el orden exacto en que deben colocarse las plumas de cada segmento. Nuestro reto es reconstruir la estatua colocando las piezas en el orden correcto. Empezamos con la cabeza, seguimos con los segmentos del cuerpo en el orden de las plumas que la tablilla indica, y terminamos con la cola. ¡Tenemos que ser muy precisos, porque si no terminamos antes del anochecer, la puerta del templo se cerrará y quedaremos atrapados! ¿Listos para comenzar?"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo en parejas y asegurar la organización.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos”, explica la importancia de trabajar en equipo y junta a los niños en pares. Si el número es impar, integra un trío para asegurar que todos tengan compañeros.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Equipo Code Squad! Hoy vamos a trabajar en pares, porque cuando dos personas piensan juntas, pueden resolver cosas más rápido y mejor. Como dice el dicho, “Dos cabezas piensan mejor que una”. ¿Verdad? Así que cuando uno tenga una idea, ¡compártanla! Es importante trabajar en equipo para que todos puedan aprender y divertirse más. Ahora busquen a una pareja para trabajar juntos en esta misión. Si queda un número impar, haremos un grupo de tres. ¡Vamos, a formar equipos y prepararnos para reconstruir la serpiente emplumada!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Equipos Organizados", verifica que todos los niños tengan pareja y estén listos para comenzar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¿Todos tienen su compañero? ¡Perfecto! Ahora que ya tienen equipo, recuerden que trabajar en pareja es compartir ideas, ayudar a su compañero y colaborar para resolver los desafíos. ¡Mientras más trabajen juntos, más divertida será esta misión! ¡Estamos listos para empezar nuestra aventura!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo_visual')">
+        <div class="title">🎨 Actividad 5: Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir los retos de codificación según la edad y trabajar con bloques de colores.</div>
+    </div>
+    <div id="codigo_visual" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio_construccion')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos y Construcción ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Intercambio de códigos entre equipos y práctica de secuenciación con bloques.</div>
+    </div>
+    <div id="intercambio_construccion" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🏁 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la misión y reflexión sobre lo aprendido durante la clase.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 26 y cuenta el desenlace de la historia, luego guía la reflexión con preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                    "¡CODE SQUAD, lo logramos! Con su ayuda, los arqueólogos pudieron reconstruir la serpiente emplumada. ¡Ahora la estatua luce increíble, con sus plumas de esmeralda, obsidiana, jade y amatista en el orden correcto! Gracias a su trabajo en equipo y habilidad para seguir los patrones, el templo está restaurado y los arqueólogos están felices de poder mostrar esta obra maestra al mundo. ¡Qué aventura tan emocionante!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 9 y explica cómo resolverán el problema.",
+                "dialogo": "¡Code Squad! Para que los arqueólogos puedan reconstruir la serpiente emplumada, vamos a ayudar a colocar las plumas de esmeralda y obsidiana en el orden correcto en dos segmentos del cuerpo. Cada segmento tendrá dos bloques de colores. ¡Vamos a hacerlo juntos y con mucha atención para que la estatua se reconstruya antes del anochecer!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 10 y entrega los materiales.",
+                "dialogo": "Aquí tienen su papel y colores. Van a dibujar los segmentos del cuerpo de la serpiente y usar dos bloques de colores para cada segmento. ¡Recuerden que estamos trabajando en equipo para completar esta misión!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 11 y guía a los niños en el proceso.",
+                "dialogo": "¡Vamos, equipo! Dibujen los segmentos del cuerpo de la serpiente y asignen sus colores de plumas. Recuerden: un segmento lleva pluma de esmeralda y otro de obsidiana. ¡Trabajen juntos y revisen que los bloques estén en el orden correcto!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡Excelente trabajo, Code Squad! Ahora es momento de intercambiar sus códigos. Voy a recoger los que hicieron y los asignaré a otro equipo para que puedan usarlo y construir los segmentos de la serpiente. ¡Vamos a ver qué tan bien podemos completar la misión!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 19 y entrega los códigos.",
+                "dialogo": "¡Adelante, equipo! Usen los bloques y sigan el patrón que les tocó para completar los segmentos de la serpiente: verde para esmeralda y negro para obsidiana. Repitan el patrón hasta que completen ambos segmentos. ¡Estoy seguro de que harán un gran trabajo!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! Justo cuando creíamos que la serpiente estaría lista, ¡nos dimos cuenta de que las instrucciones estaban al revés! La cola quedó donde debería estar la cabeza. El cuartel general nos ha enviado un nuevo código con el orden correcto de los bloques. ¡Vamos a hacerlo bien esta vez!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 23 con el nuevo código proyectado.",
+                "dialogo": "¡Manos a la obra, equipo! Usen los bloques según el código nuevo: esmeralda y obsidiana, en el orden correcto. Repitan el patrón en cada segmento para completar el cuerpo de la serpiente. ¡Esta vez lo lograremos!"
+            }
+        ]
+    },
+   "K2": {
+        "5.2": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 12 y explica el reto.",
+                "dialogo": "¡Code Squad! Esta vez, cada segmento del cuerpo de la serpiente lleva tres bloques de colores: esmeralda, obsidiana y jade. ¡Tenemos que construir dos segmentos iguales usando esos bloques y colocarlos en el orden correcto!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 13 y distribuye los materiales.",
+                "dialogo": "Aquí tienen papel y colores. Cada equipo va a dibujar los segmentos del cuerpo y asignar tres bloques de colores. ¡Trabajen juntos para colocar los bloques en el orden correcto!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 14 y acompaña a los niños.",
+                "dialogo": "¡Ya casi terminamos! Recuerden que cada segmento tiene tres bloques: uno de esmeralda, uno de obsidiana y uno de jade. ¡Vamos a trabajar juntos para completar la secuencia correctamente!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡Gran trabajo, equipo! Vamos a intercambiar sus códigos para que otro equipo pueda usarlo. ¡Así verán qué tan bien diseñaron sus secuencias!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 20 y entrega los códigos.",
+                "dialogo": "¡Vamos, equipo! Usen los bloques y sigan el patrón: pluma de esmeralda, obsidiana y jade. Repitan el patrón en los dos segmentos para completar el cuerpo de la serpiente. ¡Sé que lo lograrán!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! Las plumas de jade y obsidiana quedaron mal colocadas. Necesitamos reconstruir los segmentos con el nuevo código que nos enviaron. ¡Vamos a seguir las nuevas instrucciones para completar la serpiente correctamente!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 24 con el nuevo código proyectado.",
+                "dialogo": "¡Vamos, equipo! Usen los bloques de esmeralda, obsidiana y jade para reconstruir cada segmento. Asegúrense de seguir el orden exacto del código. ¡Este es el último paso para completar la misión!"
+            }
+        ]
+},
+    "K3": {
+        "5.3": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 15 y explica el reto.",
+                "dialogo": "¡Code Squad! Esta vez vamos a construir tres segmentos del cuerpo, cada uno con cuatro bloques: esmeralda, obsidiana, jade y amatista. ¡Necesitamos armar los tres segmentos iguales y asegurarnos de que estén en el orden correcto para completar la misión!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 16 y entrega los materiales.",
+                "dialogo": "Aquí tienen papel y colores. Cada equipo va a dibujar tres segmentos del cuerpo, asignando cuatro bloques de colores por segmento. ¡Trabajen juntos y asegúrense de que los colores estén en el orden correcto!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 17 y supervisa la actividad.",
+                "dialogo": "¡Vamos, equipo! Dibujen cada segmento con sus cuatro bloques: esmeralda, obsidiana, jade y amatista. ¡Recuerden que los bloques deben seguir el mismo orden en los tres segmentos!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 18 y recoge los códigos de cada equipo.",
+                "dialogo": "¡Lo hicieron muy bien, equipo! Vamos a intercambiar sus códigos con los de otros equipos. Así podrán construir la serpiente usando los patrones creados por sus compañeros."
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 21 y entrega los códigos.",
+                "dialogo": "¡Muy bien, equipo! Usen los bloques para completar tres segmentos siguiendo este patrón: esmeralda, obsidiana, jade y amatista. Repitan el patrón en cada segmento. ¡Vamos a completar la serpiente antes de que el templo se cierre!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 22 y explica el obstáculo.",
+                "dialogo": "¡CODE SQUAD! Los arqueólogos descubrieron que había un error en el orden de las plumas. Necesitamos reorganizar los segmentos con esmeralda, obsidiana, jade y amatista. ¡El cuartel general nos ha enviado el código correcto para hacerlo!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 25 con el nuevo código proyectado.",
+                "dialogo": "¡Estamos muy cerca de terminar! Usen los bloques de esmeralda, obsidiana, jade y amatista. Asegúrense de colocar cada segmento correctamente para completar la serpiente. ¡Confío en ustedes, equipo!"
+            }
+        ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
+
+
+
